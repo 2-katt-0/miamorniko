@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Nikola 💖</title>
+    <style>
+        /* Estilos generales */
+        body {
+            background: linear-gradient(135deg, #FADADD, #F8BBD0); /* Fondo degradado rosa pastel */
+            color: #333;
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-bottom: 2px solid #FFC1E3;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: #FF4081;
+            margin: 0;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav button {
+            background-color: #FF80AB;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #FF4081;
+        }
+
+        section {
+            display: none;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section.active {
+            display: block;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #D81B60;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-top: 2px solid #FFC1E3;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        img, .gif {
+            max-width: 100%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+
+        audio {
+            margin-top: 15px;
+            width: 80%;
+        }
+
+        .respuesta {
+            background-color: #FF80AB;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .respuesta:hover {
+            background-color: #FF4081;
+        }
+
+        .correcta {
+            background-color: #FF4081;
+            color: white;
+        }
+
+        .incorrecta {
+            background-color: #9C1B1B;
+            color: white;
+        }
+
+        .siguiente-btn {
+            background-color: #FF4081;
+            color: white;
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .siguiente-btn:hover {
+            background-color: #FF80AB;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Bienvenida -->
+    <div id="bienvenida" class="bienvenida">
+        <h2>Bienvenida a este pequeño rincón de Loren 💖</h2>
+        <p>Por favor, ingresa tu nombre:</p>
+        <input type="text" id="nombre" placeholder="Tu nombre...">
+        <button onclick="verificarNombre()">Entrar</button>
+    </div>
+
+    <!-- Encabezado -->
+    <header style="display:none;">
+        <h1>Para Nikola 💖</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav style="display:none;">
+        <button onclick="mostrarSeccion('historia')">Nuestra Historia</button>
+        <button onclick="mostrarSeccion('piensoenti')">Pienso en Ti</button>
+        <button onclick="mostrarSeccion('preguntas')">Preguntas</button>
+        <button onclick="mostrarSeccion('amoreterno')">Amor Eterno</button>
+    </nav>
+
+    <!-- Contenido -->
+    <main style="display:none;">
+        <!-- Sección: Nuestra Historia -->
+        <section id="historia" class="active">
+            <h2>Nuestra Historia</h2>
+            <p>Nuestra historia es la más hermosa que tengo y la única que quiero escribir. Es increíble cómo todo comenzó siendo un juego y, en tan poco tiempo, me he perdido completamente en ti. Lo único que tengo claro es que quiero estar contigo, amarte y hacerte feliz, porque contigo yo ya lo soy. Quiero seguir creando recuerdos a tu lado, buenos y malos, porque mientras sea contigo, todo vale la pena.</p>
+        </section>
+
+        <!-- Sección: Pienso en Ti -->
+        <section id="piensoenti">
+            <h2>Pienso en Ti</h2>
+            <p>A este punto, la pregunta ya no es "¿Cuándo no pienso en ti?", porque eso es completamente imposible. No hay momento en el que no estés en mis pensamientos. Eres parte de mi vida, y eso no cambia. Te pienso al despertarme, cuando el sol entra por la ventana y la cama aún conserva el calor de tu abrazo, te pienso cuando el frío del día me envuelve y siento que lo único que quiero es estar a tu lado para calentarte con mis brazos. Te pienso mientras camino, cuando la ciudad parece vacía y mi cabeza solo quiere tenerte cerca. Te pienso incluso cuando no estás aquí, como un susurro constante que me acompaña en cada rincón de mi día.</p>
+        </section>
+
+        <!-- Sección: Preguntas -->
+        <section id="preguntas">
+            <h2>Preguntas</h2>
+            <p>Escribe algo antes de responder:</p>
+            <input type="text" id="mensaje" placeholder="Escribe algo...">
+            
+            <div id="pregunta-1">
+                <p><strong>1. ¿Qué día estuvimos juntas? </p>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>28.09</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'correcta')">
+                    <p>25.09</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>23.09</p>
+                </div>
+                <button class="siguiente-btn" onclick="mostrarSiguientePregunta(2)">Siguiente</button>
+            </div>
+            <div id="pregunta-2" style="display:none;">
+                <p><strong>2. ¿Cuál fue la primera canción que te dedique?</p>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>Esclavos</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'correcta')">
+                    <p>we fell in love in october</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>Algo Contigo</p>
+                </div>
+                <button class="siguiente-btn" onclick="mostrarSiguientePregunta(3)">Siguiente</button>
+            </div>
+            <div id="pregunta-3" style="display:none;">
+                <p><strong>3. ¿Cómo se llama mi primer gatito?</strong></p>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>Will</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'correcta')">
+                    <p>Willy</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>Wally</p>
+                </div>
+                <button class="siguiente-btn" onclick="mostrarSiguientePregunta(4)">Siguiente</button>
+            </div>
+            <div id="pregunta-4" style="display:none;">
+                <p><strong>4. ¿Qué apodo tierno uso más para ti?</strong></p>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>Preciosa</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'correcta')">
+                    <p>Amor</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>Mi vida</p>
+                </div>
+                <button class="siguiente-btn" onclick="mostrarSiguientePregunta(5)">Siguiente</button>
+            </div>
+            <div id="pregunta-5" style="display:none;">
+                <p><strong>5. ¿Es cierto cuando te digo que te voy a amar toda la vida??</strong></p>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'correcta')">
+                    <p>Sí</p>
+                </div>
+                <div class="respuesta" onclick="marcarRespuesta(this, 'incorrecta')">
+                    <p>No</p>
+                </div>
+                <button class="siguiente-btn" onclick="mostrarSiguientePregunta(6)">Siguiente</button>
+            </div>
+        </section>
+
+        <!-- Sección: Amor Eterno -->
+        <section id="amoreterno">
+            <h2>Amor Eterno</h2>
+            <p>Hoy no quiero decirte simplemente "te amo", porque siento que esas palabras, aunque poderosas, no alcanzan para describir lo que llevas en mi corazón. Lo que siento por ti va más allá de cualquier frase o expresión conocida, es un lazo invisible que me une a ti en todos los sentidos posibles. Es más que amor, es admiración, pasión, ternura, y sobre todo, una conexión que me hace sentir completa.</p>
+           <p>Me encantas de una manera que no puedo describir del todo con palabras. Cada detalle de ti me fascina, tu risa, que suena como una melodía que quiero escuchar para siempre, tus ojos, que esconden mundos enteros donde me quiero perder, y tu voz, que tiene el poder de calmarme en los momentos más difíciles. Pero no es solo lo que veo o escucho, sino lo que siento cuando estoy contigo.</p>
+          <p>Adoro tu personalidad, fuerte, auténtica, única. Tu forma de pensar me inspira, tu manera de amar me llena, y tu existencia me motiva a ser mejor cada día. En cada gesto tuyo, en cada palabra, en cada momento, encuentro motivos para sonreír y para agradecerle al universo por haberte puesto en mi vida.</p>
+       <p>Cuando pienso en ti, no solo pienso en el presente, si no en todo lo que quiero construir contigo. Sueño con días llenos de risas, con aventuras compartidas, con noches en las que simplemente estemos abrazadas, sintiendo que no hace falta nada más. Sueño con verte feliz, siendo la persona maravillosa que eres, y haciendo todo lo que puedo para contribuir a esa felicidad.</p>
+         <p>Quiero que recuerdes siempre esto, no importa cuánto tiempo pase, no importa lo que enfrente la vida, mi amor por ti siempre será tuyo, como lo es mi corazón. Eres mi hogar, mi alegría, mi sueño, y mi realidad más bonita.</P>
+        <p>Por siempre tuya,
+          Loren</p>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Hecho con mucho 💖 por Loren</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        function verificarNombre() {
+            var nombre = document.getElementById("nombre").value;
+            if (nombre) {
+                document.querySelector(".bienvenida").style.display = "none";
+                document.querySelector("header").style.display = "block";
+                document.querySelector("nav").style.display = "block";
+                document.querySelector("main").style.display = "block";
+            }
+        }
+
+        function mostrarSeccion(id) {
+            var secciones = document.querySelectorAll("section");
+            secciones.forEach(function(seccion) {
+                seccion.classList.remove("active");
+            });
+            document.getElementById(id).classList.add("active");
+        }
+
+        function marcarRespuesta(element, tipo) {
+            var respuestas = element.parentNode.querySelectorAll(".respuesta");
+            respuestas.forEach(function(respuesta) {
+                respuesta.style.pointerEvents = "none"; // Deshabilitar más clics
+            });
+            if (tipo === "correcta") {
+                element.classList.add("correcta");
+            } else {
+                element.classList.add("incorrecta");
+            }
+        }
+
+        function mostrarSiguientePregunta(pregunta) {
+            var preguntaActual = document.getElementById("pregunta-" + (pregunta - 1));
+            var siguientePregunta = document.getElementById("pregunta-" + pregunta);
+            preguntaActual.style.display = "none";
+            siguientePregunta.style.display = "block";
+        }
+    </script>
+</body>
+</html>
